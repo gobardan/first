@@ -1,0 +1,106 @@
+*structure
+	Structure is a collection of simple varibale the variable in a structure can be of different type.
+|example: 
+	struct student
+	{
+	char name[20];
+	int Roll_no;
+	float marks;
+
+//create a structure person to store his name,age & salary.
+
+#include<iostream>
+using namespace std;
+struct person
+{
+	char name[100];
+	int age;
+	double salary;
+};
+int main()
+{
+	person p1;
+	cout<<"person detail"<<endl<<"enter person name:"<<endl;
+	cin.getline(p1.name,100);
+	cout<<"enter person age:"<<endl;
+	cin>>p1.age;
+	cout<<"enter salary: "<<endl;
+	cin>>p1.salary;
+	cout<<endl<<"person detail are:"<<endl;
+	cout<<"person name:"<<p1.name<<endl;
+	cout<<"person age:"<<p1.age<<endl;
+	cout<<"person salary:"<<p1.salary<<endl;
+	return 0;
+}
+
+*A class represents group of similar objects.It is also a way to bind data describing an intity and it's assciated functions
+together.
+
+Syntax:	class class_name
+	{
+	char name;	//charastics
+	char roll_no;	//
+	void attendclass()
+	{
+	_______body		//function
+	}
+   	};
+
+
+
+1.The body of the declaration can contain members that can be either data or function declaration, and optionally
+ exessspecifier.
+
+2.The varibele declare inside the class is known as data member and function are known as member function.
+
+3.These data member and member function accessed by three exessed specifier such as( private, public and protected).
+
+4.By default the exess specifier of calss is private.
+
+||
+*private:
+	 It can be assessed within the class.
+*public:
+	 It can be assessed within and outside the a class.
+*protected:
+	 It can be assessed within class with friend of the class.
+
+
+
+Acess speficier |	own class	|	Derived Class	|	Outside Class	|
+
+public			    @			    @			    @
+
+private			    @			    x			    x
+
+private			    @			    @			    x
+
+*Types of class:
+1.Local
+2.Global
+3.Friend
+4.Template
+5.Abstract
+6.Static
+
+*Class Method Defination:
+			Members functions can be defiend in two places;
+i.Outside the class defination 
+ii.Inside the class defination
+
+i.Outside the class defination:	
+				|To write functions we need to declare function inside the class and defination is
+written in outside the class.
+------syntax-----
+class_name :: function name 
+{
+function body
+}
+
+o The membership label 'class_name::' operator tells the compiler that the 'function_name' belongs to the class 
+'class_name'
+o '::' is scope resulation operator
+
+class area
+{
+public
